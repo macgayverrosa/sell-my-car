@@ -1,6 +1,5 @@
 import { auth } from "@/auth";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import NavbarUser from "./components/navbar-user";
 import NavBarLinks from "./components/navbar-links";
 import NavbarAuxBar from "./components/navbar-auxbar";
