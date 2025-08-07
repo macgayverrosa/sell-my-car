@@ -6,7 +6,8 @@ export const GlobalConfig = {
   APP_DESCRIPTION: "Description",
   APP_AUTHOR: "ESC Company",
   APP_FAVICON: "/favicon.ico",
-
+  APP_LOGO: "/logo.png",
+  
   // APP Socials
   SOCIAL_Facebook: "#",
   SOCIAL_Instagram: "#",

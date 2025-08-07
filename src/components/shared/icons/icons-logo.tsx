@@ -69,14 +69,6 @@ export const IconsLogo = {
         height={1200}
         className={`w-auto hidden dark:block ${props.className || ""}`}
       /> */}
-      <svg
-        width="50"
-        height="50"
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="50" cy="50" r="40" fill="#0abab5" />
-      </svg>
       {GlobalConfig.APP_NAME_FIRST}
       <span className="text-primary font-light">{GlobalConfig.APP_NAME_LAST}</span>
     </Link>

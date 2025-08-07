@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import SocialIcons from "@/components/shared/icons/icons-socials";
 import { MaxWidthWrapper } from "@/components/shared/wrappers/max-width-wrapper";
-import IconsFlag2 from "@/components/shared/icons/icons-flags2";
+// import IconsFlag2 from "@/components/shared/icons/icons-flags2";
 
 export default function NavbarAuxBar() {
   return (
