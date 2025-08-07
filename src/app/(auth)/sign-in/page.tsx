@@ -6,7 +6,7 @@ import { LoginForm } from "@/components/layout/global/auth/login-form";
 export default async function LoginPage() {
   const session = await auth();
   if (session) {
-    redirect("/");
+    redirect("/portal");
   }
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
