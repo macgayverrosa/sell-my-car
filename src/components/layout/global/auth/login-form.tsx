@@ -9,6 +9,7 @@ export function LoginForm({
   ...props
 }: React.ComponentProps<"form">) {
   return (
+    <>
     <form className={cn("flex flex-col gap-6", className)} {...props}>
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-2xl font-bold">Login to your account</h1>
@@ -50,7 +51,6 @@ export function LoginForm({
           </svg>
           Login with GitHub
         </Button>
-        <GoogleSignInButton />
       </div>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}
@@ -59,5 +59,7 @@ export function LoginForm({
         </a>
       </div>
     </form>
+            <GoogleSignInButton />
+</>
   )
 }

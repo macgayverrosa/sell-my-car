@@ -15,7 +15,7 @@ export default async function RootLayout({
   return (
     <>
       <NavBar />
-      {children}
+      <main className="flex-1 min-h-screen">{children}</main>
       <Footer />
     </>
   );
