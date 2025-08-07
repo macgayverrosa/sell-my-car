@@ -1,12 +1,12 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import { LoginForm } from "@/components/layout/global/auth/login-form";
+import { LoginForm } from "@/components/shared/auth/login-form";
 import { IconsLogo } from "@/components/shared/icons/icons-logo";
 
 export default async function LoginPage() {
   const session = await auth();
   if (session) {
-    redirect("/portal");
+    redirect("/app");
   }
   return (
     <div className="grid min-h-svh lg:grid-cols-2">

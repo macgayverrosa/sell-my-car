@@ -1,18 +1,18 @@
-import NavBarLinks from "./components/navbar-links";
-import { ArrowRight, FilePlus2 } from "lucide-react";
-// import { SignOutButton } from "@clerk/nextjs";
+import { auth } from "@/auth";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import NavbarUser from "./components/navbar-user";
+import NavBarLinks from "./components/navbar-links";
 import NavbarAuxBar from "./components/navbar-auxbar";
-// import { currentUser } from "@clerk/nextjs/server";
-import { IconsLogo } from "@/components/shared/icons/icons-logo";
 import { Separator } from "@/components/ui/separator";
+import { IconsLogo } from "@/components/shared/icons/icons-logo";
 import DarkToggle from "@/components/shared/global/themes/dark-toggle";
 import { LinkWrapper } from "@/components/shared/wrappers/link-wrapper";
 import { MaxWidthWrapper } from "@/components/shared/wrappers/max-width-wrapper";
 
 export const NavBar = async () => {
-  // const user = await currentUser();
-  const user = null;
+  const session = await auth();
+
   return (
     <>
       <NavbarAuxBar />
@@ -28,26 +28,24 @@ export const NavBar = async () => {
               />
               <DarkToggle />
 
-              {user ? (
+              {session ? (
                 <>
-                  {/* <SignOutButton> */}
-                  <Button variant="ghost">Sign out</Button>
-                  {/* </SignOutButton> */}
-
                   <LinkWrapper
                     href="/app/dashboard"
                     className="flex items-center gap-1"
                   >
                     Dashboard <ArrowRight className="ml-1.5 size-4" />
                   </LinkWrapper>
+
+                  <NavbarUser />
                 </>
               ) : (
-                <LinkWrapper href="/portal/sign-in" variant="ghost">
+                <LinkWrapper href="/app/sign-in" variant="ghost">
                   Sign in
                 </LinkWrapper>
               )}
               <LinkWrapper
-                href="/portal/post/create"
+                href="/app/post/create"
                 className="flex items-center gap-1.5"
               >
                 Sell now
