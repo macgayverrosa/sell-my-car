@@ -20,7 +20,6 @@ export const NavBar = async () => {
         <MaxWidthWrapper>
           <div className="flex h-20 items-center justify-between">
             <IconsLogo.text />
-            {/* <Logo.textLogo className="h-16" /> */}
             <div className="h-full flex items-center space-x-4">
               <NavBarLinks />
               <Separator
@@ -43,26 +42,15 @@ export const NavBar = async () => {
                   </LinkWrapper>
                 </>
               ) : (
-                <>
-                  <LinkWrapper href="/sign-in" variant="ghost">
-                    Sign in
-                  </LinkWrapper>
-
-                  <div className="h-8 w-px bg-gray-200" />
-
-                  <LinkWrapper
-                    href="/sign-up"
-                    className="flex items-center gap-1.5"
-                  >
-                    Sign up <ArrowRight className="size-4" />
-                  </LinkWrapper>
-                </>
+                <LinkWrapper href="/portal/sign-in" variant="ghost">
+                  Sign in
+                </LinkWrapper>
               )}
               <LinkWrapper
-                href="/post/create"
+                href="/portal/post/create"
                 className="flex items-center gap-1.5"
               >
-                Create a Post <FilePlus2 className="size-4" />
+                Sell now
               </LinkWrapper>
             </div>
           </div>
