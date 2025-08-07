@@ -1,6 +1,6 @@
 import { Briefcase, Cog, Cpu, Layers, Rocket, Shield } from "lucide-react";
 
-export default function SessionWhy() {
+export default function SiteWhy() {
   return (
     <section id="why" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
       <div className="container px-4 md:px-6">
