@@ -1,7 +1,13 @@
-import { GalleryVerticalEnd } from "lucide-react"
-import { LoginForm } from "@/components/layout/global/auth/login-form"
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
+import { GalleryVerticalEnd } from "lucide-react";
+import { LoginForm } from "@/components/layout/global/auth/login-form";
 
-export default function LoginPage() {
+export default async function LoginPage() {
+  const session = await auth();
+  if (session) {
+    redirect("/");
+  }
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
@@ -27,5 +33,5 @@ export default function LoginPage() {
         />
       </div>
     </div>
-  )
+  );
 }

@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { GoogleSignInButton } from "@/components/shared/auth/signin-button";
 
 export function LoginForm({
   className,
@@ -49,6 +50,7 @@ export function LoginForm({
           </svg>
           Login with GitHub
         </Button>
+        <GoogleSignInButton />
       </div>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}

@@ -9,9 +9,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const session = await auth();
-  if (!session) {
-    redirect("/sign-in");
-  }
+  // if (!session) {
+  //   redirect("/sign-in");
+  // }
   return (
     <>
       <NavBar />
