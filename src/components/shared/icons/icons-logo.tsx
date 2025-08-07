@@ -53,7 +53,7 @@ export const IconsLogo = {
   text: () => (
     <Link
       href={routes.LANDING}
-      className="flex z-40 font-semibold text-xl items-center dark:text-white h-full"
+      className="flex z-40 font-semibold text-2xl items-center dark:text-white h-full"
     >
       {/* <Image
         src="/placeholder.svg"
@@ -77,8 +77,8 @@ export const IconsLogo = {
       >
         <circle cx="50" cy="50" r="40" fill="#0abab5" />
       </svg>
-      {GlobalConfig.APP_NAME}
-      <span className="text-primary">Wise</span>
+      {GlobalConfig.APP_NAME_FIRST}
+      <span className="text-primary font-light">{GlobalConfig.APP_NAME_LAST}</span>
     </Link>
   ),
   // textLogo: (props: IconProps) => (
